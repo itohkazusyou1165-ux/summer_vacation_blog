@@ -1,16 +1,22 @@
-//function (関数を作る)　関数の名前・自由につけれる　(引数(関数に引き渡す値）){処理内容（何がしたいのか）}
-function drawerButton() {
-  const dButton = document.querySelector(".drawerButton");
-  const dMenu = document.querySelector(".drawerMenu");
-  //連れてきた要素にクラスのつけ外しをする。
-  dButton.classList.toggle("active");
-  dMenu.classList.toggle("active");
-}
 
-// メニューリンクをクリックしたら閉じる処理
-document.querySelectorAll(".drawerMenu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    document.querySelector(".drawerButton").classList.remove("active");
-    document.querySelector(".drawerMenu").classList.remove("active");
-  });
+// ハンバーガーボタンとナビゲーションメニューの要素を取得
+const hamburgerBtn = document.getElementById('js-hamburger');
+const navMenu = document.getElementById('js-nav');
+
+// ボタンがクリックされた時の処理
+hamburgerBtn.addEventListener('click', function() {
+    // ボタン自身に 'active' クラスを付け外しする（×印アニメーション用）
+    this.classList.toggle('active');
+    
+    // ナビゲーションメニューに 'active' クラスを付け外しする（スライド表示用）
+    navMenu.classList.toggle('active');
+});
+
+// メニュー内のリンクがクリックされたら、メニューを閉じる（スマホ利用時の親切設計）
+const navLinks = document.querySelectorAll('.main-nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
