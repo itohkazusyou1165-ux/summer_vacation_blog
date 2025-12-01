@@ -23,250 +23,253 @@ body {
 
 /* --- 基本設定と変数 --- */
 :root {
-    --coffee-dark: #5d4037;  /* 濃い茶色 */
-    --coffee-med: #8d6e63;   /* 中間の茶色 */
-    --coffee-light: #d7ccc8; /* 薄い茶色 */
-    --cream-bg: #fff8e1;     /* 背景のクリーム色 */
-    --accent-color: #ffab91; /* アクセントカラー（薄いオレンジ） */
-    --font-handwriting: 'Kaushan Script', cursive; /* 手書き風フォント */
-    --font-body: 'Zen Maru Gothic', sans-serif;    /* 丸ゴシック体 */
+  --coffee-dark: #5d4037; /* 濃い茶色 */
+  --coffee-med: #8d6e63; /* 中間の茶色 */
+  --coffee-light: #d7ccc8; /* 薄い茶色 */
+  --cream-bg: #fff8e1; /* 背景のクリーム色 */
+  --accent-color: #ffab91; /* アクセントカラー（薄いオレンジ） */
+  --font-handwriting: "Kaushan Script", cursive; /* 手書き風フォント */
+  --font-body: "Zen Maru Gothic", sans-serif; /* 丸ゴシック体 */
 }
 
 body {
-    margin: 0;
-    font-family: var(--font-body);
-    background-color: var(--cream-bg);
-    color: var(--coffee-dark);
-    line-height: 1.6;
-    /* 少し紙のような質感を出す背景パターン */
-    background-image: radial-gradient(var(--coffee-light) 1px, transparent 1px);
-    background-size: 20px 20px;
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--cream-bg);
+  color: var(--coffee-dark);
+  line-height: 1.6;
+  /* 少し紙のような質感を出す背景パターン */
+  background-image: radial-gradient(var(--coffee-light) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* --- ヘッダー --- */
 .site-header {
-    background-color: #fff;
-    padding: 15px 30px;
-    border-bottom: 4px dotted var(--coffee-med); /* カフェ風の点線ボーダー */
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 15px 30px;
+  border-bottom: 4px dotted var(--coffee-med); /* カフェ風の点線ボーダー */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-title {
-    font-family: var(--font-handwriting);
-    font-size: 1.8rem;
-    margin: 0;
-    color: var(--coffee-dark);
+  font-family: var(--font-handwriting);
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--coffee-dark);
 }
 
 /* --- ナビゲーション（PC表示） --- */
 .main-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .main-nav a {
-    text-decoration: none;
-    color: var(--coffee-med);
-    font-weight: bold;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: var(--coffee-med);
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .main-nav a:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* --- ハンバーガーボタン（初期は非表示） --- */
 .hamburger-btn {
-    display: none; /* PCでは隠す */
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    position: relative;
-    z-index: 200;
+  display: none; /* PCでは隠す */
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 200;
 }
 
 .hamburger-btn span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--coffee-dark);
-    position: absolute;
-    transition: all 0.4s;
-    border-radius: 3px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--coffee-dark);
+  position: absolute;
+  transition: all 0.4s;
+  border-radius: 3px;
 }
 
-.hamburger-btn span:nth-child(1) { top: 0; }
-.hamburger-btn span:nth-child(2) { top: 11px; }
-.hamburger-btn span:nth-child(3) { bottom: 0; }
+.hamburger-btn span:nth-child(1) {
+  top: 0;
+}
+.hamburger-btn span:nth-child(2) {
+  top: 11px;
+}
+.hamburger-btn span:nth-child(3) {
+  bottom: 0;
+}
 
 /* --- メインコンテンツ --- */
 main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .hero-section {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .hero-section h2 {
-    font-family: var(--font-handwriting);
-    font-size: 2.5rem;
-    color: var(--coffee-med);
-    margin-bottom: 10px;
+  font-family: var(--font-handwriting);
+  font-size: 2.5rem;
+  color: var(--coffee-med);
+  margin-bottom: 10px;
 }
 
 /* --- カードレイアウト --- */
 .blog-cards-container {
-    display: grid;
-    /* 画面幅に合わせて自動で列数を調整（最低300px幅を確保） */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+  display: grid;
+  /* 画面幅に合わせて自動で列数を調整（最低300px幅を確保） */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(93, 64, 55, 0.15); /* 柔らかい影 */
-    transition: transform 0.3s;
-    border: 1px solid var(--coffee-light);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(93, 64, 55, 0.15); /* 柔らかい影 */
+  transition: transform 0.3s;
+  border: 1px solid var(--coffee-light);
 }
 
 .card:hover {
-    transform: translateY(-5px); /* ホバー時に少し浮き上がる */
+  transform: translateY(-5px); /* ホバー時に少し浮き上がる */
 }
 
 .card-image {
-    height: 200px;
-    position: relative;
-    overflow: hidden;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
 }
 .card:hover .card-image img {
-    transform: scale(1.05); /* ホバー時に画像が少し拡大 */
+  transform: scale(1.05); /* ホバー時に画像が少し拡大 */
 }
 
 .card-date {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--accent-color);
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border-radius: 20px;
-    font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .card-content {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .card-content h3 {
-    font-family: var(--font-handwriting);
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: var(--coffee-med);
+  font-family: var(--font-handwriting);
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--coffee-med);
 }
 
 .read-more-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
-    background-color: var(--coffee-med);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: var(--coffee-med);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .read-more-btn:hover {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 /* --- フッター --- */
 .site-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: var(--coffee-dark);
-    color: var(--coffee-light);
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: var(--coffee-dark);
+  color: var(--coffee-light);
+  font-size: 0.9rem;
 }
-
 
 /* --- スマホ・タブレット向けレスポンシブ対応 --- */
 @media screen and (max-width: 768px) {
-    /* ハンバーガーボタンを表示 */
-    .hamburger-btn {
-        display: block;
-    }
+  /* ハンバーガーボタンを表示 */
+  .hamburger-btn {
+    display: block;
+  }
 
-    /* ナビゲーションを隠して、開いた時のスタイルを設定 */
-    .main-nav {
-        position: fixed;
-        top: 0;
-        right: -100%; /* 初期位置は画面外（右） */
-        width: 80%; /* 画面の80%幅 */
-        height: 100vh;
-        background-color: var(--cream-bg);
-        padding-top: 80px; /* 上部に余白 */
-        transition: right 0.4s ease-in-out; /* スライドのアニメーション */
-        z-index: 150;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-    }
-    
-    /* メニューが開いた時のクラス（JSで付与） */
-    .main-nav.active {
-        right: 0; /* 画面内に出てくる */
-    }
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--cream-bg);
+    padding-top: 80px;
+    transition: right 0.4s ease-in-out;
+    z-index: 150;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
 
-    .main-nav ul {
-        flex-direction: column; /* 縦並びにする */
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .main-nav a {
-        font-size: 1.2rem;
-    }
+  .main-nav.active {
+    right: 0;
+  }
 
-    /* --- ハンバーガーボタンが「×」になるアニメーション --- */
-    .hamburger-btn.active span:nth-child(1) {
-        top: 11px;
-        transform: rotate(45deg);
-    }
-    .hamburger-btn.active span:nth-child(2) {
-        opacity: 0; /* 真ん中の線を消す */
-    }
-    .hamburger-btn.active span:nth-child(3) {
-        bottom: 11px;
-        transform: rotate(-45deg);
-    }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .main-nav a {
+    font-size: 1.2rem;
+  }
+
+  /* --- ハンバーガーボタンが「×」になるアニメーション --- */
+  .hamburger-btn.active span:nth-child(1) {
+    top: 11px;
+    transform: rotate(45deg);
+  }
+  .hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-btn.active span:nth-child(3) {
+    bottom: 11px;
+    transform: rotate(-45deg);
+  }
 }
